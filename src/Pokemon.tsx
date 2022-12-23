@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 type PokemonDetailsType = {
   name: string;
@@ -33,6 +33,7 @@ export const Pokemon = () => {
   }, [params]);
   return (
     <>
+    
       {pageLoading ? (
         <>
           <div className="w-screen container h-screen justify-center items-center text-xl text-black">
@@ -41,6 +42,9 @@ export const Pokemon = () => {
         </>
       ) : (
         <>
+        <div className="my-4 text-blue-700 container mx-auto px-5 max-w-6xl">
+        <Link to="/">Home</Link>
+        </div>
           {pokemonDetail && (
             <div className="container mx-auto px-5 pt-10 max-w-6xl">
               <h2 className="font-bold text-center">{pokemonDetail?.name}</h2>
