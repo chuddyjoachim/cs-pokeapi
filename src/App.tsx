@@ -30,10 +30,6 @@ function App() {
     getAllPokemons();
   }, []);
 
-  useEffect(() => {
-    allPokemons && console.log({ allPokemons });
-  }, [allPokemons]);
-
   return (
     <div className="">
       <div className="container mx-auto px-5 pt-10 max-w-6xl">

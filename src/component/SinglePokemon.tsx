@@ -1,13 +1,9 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 type SinglePokemonProp = {
   id: number;
   name: string;
   imgUrl: string;
-};
-
-const handleViewDetail = (id: number) => {
-  console.log({ id });
 };
 
 export const SinglePokemon = ({ id, imgUrl, name }: SinglePokemonProp) => {
@@ -18,12 +14,14 @@ export const SinglePokemon = ({ id, imgUrl, name }: SinglePokemonProp) => {
         <div className="h-40 flex justify-center items-center">
           <img src={imgUrl} alt={name} width={80} height={80} />
         </div>
+        <Link to={`/${id}`}>
+            
         <button
           className="border p-1 px-1.5 mt-auto"
-          onClick={() => handleViewDetail(id)}
-        >
+          >
           View detail
         </button>
+            </Link>
       </div>
     </div>
   );
