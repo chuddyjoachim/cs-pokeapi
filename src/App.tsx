@@ -39,9 +39,9 @@ function App() {
         <div className="mt-5">
           <div className="grid md:grid-cols-3 gap-4">
             {allPokemons &&
-              allPokemons.map((p) => (
+              allPokemons.map((p, idx) => (
                 <SinglePokemon
-                  key={p.id}
+                  key={idx}
                   id={p.id}
                   name={p.name}
                   imgUrl={p?.sprites?.other?.dream_world?.front_default}

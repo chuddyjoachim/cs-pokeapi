@@ -59,7 +59,7 @@ export const Pokemon = () => {
                 ))}
               </div>
               <div className="my-4 flex flex-col space-y-2">
-                <h2 className="font-bold text-lg">Abilities:</h2>
+                <h2 className="font-bold text-lg">Moves:</h2>
                 <ul className="flex space-y-2 flex-col list-disc">
                   {pokemonDetail.moves.map((a) => (
                     <li>{a.move.name}</li>
